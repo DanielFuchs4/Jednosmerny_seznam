@@ -2,6 +2,7 @@ void main() {
     Scanner scanner = new Scanner(System.in);
     FrontaUchazecu fronta = new FrontaUchazecu();
     boolean bezi = true;
+    int pocitadlo = 0;
 
     while (bezi) {
         System.out.println("\n--- MENU ---");
@@ -15,6 +16,7 @@ void main() {
 
         System.out.print("Zvolte možnost: ");
         int volba = scanner.nextInt();
+        scanner.nextLine();
 
         switch (volba) {
             case 1:
@@ -45,6 +47,8 @@ void main() {
 
             case 2:
                 fronta.obslouzit();
+                pocitadlo++;
+                System.out.println("Počet obsloužených: "+pocitadlo);
                 break;
 
             case 3:
